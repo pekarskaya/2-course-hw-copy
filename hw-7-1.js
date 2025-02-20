@@ -47,21 +47,11 @@ console.log(getRandomArr(8));
  
   // Задание 7. Создать функцию, которая принимает два целых числа и возвращает случайное число в этом диапазоне.
 
-  function getRandomInt() {
-      return Math.floor(Math.random() * 10); 
+  function randomIntFromInterval(min, max) { 
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
-  num1 = getRandomInt();
-  
-  function getRandomInt2() {
-      return Math.ceil(Math.random() * 10);
-  }
-  num2 = getRandomInt2();
- 
-  num3 = Math.floor(Math.random()*(num1 - num2) + num2);
-  
-  console.log("Первое число " + num1);
-  console.log("Второе число " + num2);
-  console.log("Число в диапазоне " + num3);
+  const randomInt = randomIntFromInterval(1, 10);
+  console.log(randomInt);
 
 // Задание 8. Вывести в консоль текущую дату.
 let currentDate = new Date();
